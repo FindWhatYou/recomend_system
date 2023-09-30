@@ -1,8 +1,5 @@
 # recomend_system
 
-Popularity rankings
-LESSON PROGRESS
-16% Complete
 Recommender systems can get complex. But, sometimes, simple solutions are the best ones. When a new customer enters the store and Ursula does not know them, she likes to recommend the favourite movies from her customers: movies that are likely to appeal to everyone.
 
 This is exactly what first “row” of WBSFLIX page will constitute: a non-personalized recommender system and it is made of the “top” movies in the dataset.
@@ -12,9 +9,6 @@ This is exactly what first “row” of WBSFLIX page will constitute: a non-pers
 The objective of this lesson is to end up with a notebook that would generate the titles of this mock-up page. You don’t have to worry about the design of the page or the integration with the database: you are in the experimentation phase. Your code, when complete, will be later on adapted and integrated to the back-end of the webpage. For now, we’ll be happy to just output movie titles so that we can judge the adequacy of the recommendations.
 
 Since users have given an explicit rating to the movies, this should be as easy as grouping the “ratings” dataset by average rating, sorting the values and getting the top rated movies, right?
-
-Well, these are the results:
-
 
 
 These movies have a perfect rating, but probably they got it from very few reviews: Ursula would consider a movie as the “favourite of her customers” just because a single person loved it!
