@@ -3,9 +3,11 @@ import streamlit as st
 
 
 df = pd.read_csv(r'./popular_app/best_movies.csv') 
-print(df)
 
-st.data_editor(df, num_rows="dynmic", hide_index=True)
+number = st.number_input('Insert a number')
+displayed_df = df[:number]
+
+st.data_editor(displayed_df, num_rows="dynmic", hide_index=True)
 
 
 
