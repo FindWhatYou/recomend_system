@@ -3,7 +3,7 @@ import sklearn
 from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
 
-def main(): 
+def main(toy_story_movie_id): 
     # Define a function to construct Google Drive download links
     def gd_path(file_id):
         return f"https://drive.google.com/uc?export=download&id={file_id}"
@@ -33,7 +33,7 @@ def main():
     # Find the movie ID for "Toy Story"
     toy_story_mask = movies["title"].str.contains('Toy Story', case=False)
     comedy_genre_mask = movies["genres"].str.contains('Comedy', case=False)
-    toy_story_movie_id = movies.loc[toy_story_mask & comedy_genre_mask, "movieId"].values[0]
+    toy_story_movie_id_XX = movies.loc[toy_story_mask & comedy_genre_mask, "movieId"].values[0] #
 
     # Create a DataFrame to store cosine similarities with "Toy Story"
     toy_story_cosines_df = pd.DataFrame(movies_cosines_matrix[toy_story_movie_id])
@@ -60,11 +60,12 @@ def main():
     top_10_recommendations = toy_story_cosines_df.head(10)
     return top_10_recommendations
 
-st.data_editor(main())
+number = st.number_input('Witch movie id? (max 193609)', step=1, min_value=1, value=1)
 
+st.data_editor(main(number))
 
 
 import time
 start_time = time.time()
 main()
-st.title("--- %s seconds ---" % (time.time() - start_time))
+st.text("--- %s seconds ---" % (time.time() - start_time))
