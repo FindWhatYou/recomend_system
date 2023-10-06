@@ -63,4 +63,9 @@ print(top_10_recommendations)
 
 st.data_editor(top_10_recommendations)
 
-st.title('done')
+
+
+import time
+start_time = time.time()
+main()
+st.title("--- %s seconds ---" % (time.time() - start_time))
