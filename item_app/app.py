@@ -57,7 +57,10 @@ def calculate_recommendations(option):
 
     # Display the top 10 movie recommendations based on cosine similarity to the selected movie
     top_10_recommendations = movie_cosines_df.head(10)
-    return top_10_recommendations
+
+    show_list = top_10_recommendations.merge(movies,how='inner', on="movieId")[['movieId','title','genres']]
+    show_list
+    return show_list
 
 # Multiselect for movies
 movie_titles_list = movies['title'].tolist()
