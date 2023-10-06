@@ -62,3 +62,5 @@ top_10_recommendations = toy_story_cosines_df.head(10)
 print(top_10_recommendations)
 
 st.data_editor(top_10_recommendations)
+
+st.title('done')
