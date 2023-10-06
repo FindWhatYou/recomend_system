@@ -31,7 +31,7 @@ movies_cosines_matrix = pd.DataFrame(cosine_similarity(user_movie_matrix.T),
 
 def calculate_recommendations(option): 
     # Find the movie ID for the selected movie
-    movie_mask = movies["title"].str.contains(option)
+    movie_mask = movies["title"] == option
     movie_id = movies.loc[movie_mask, "movieId"].values[0]
 
     # Create a DataFrame to store cosine similarities with the selected movie
