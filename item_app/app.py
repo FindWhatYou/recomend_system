@@ -74,5 +74,5 @@ if st.button('Calculate Recommendations'):
     st.write('You selected:', option)
     start_time = time.time()
     recommendations = calculate_recommendations(option)
-    st.table(recommendations)
+    st.dataframe(recommendations,hide_index=True)
     st.text("--- %s seconds ---" % (time.time() - start_time))
