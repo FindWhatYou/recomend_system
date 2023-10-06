@@ -67,5 +67,5 @@ st.data_editor(main(number))
 
 import time
 start_time = time.time()
-main()
+main(number)
 st.text("--- %s seconds ---" % (time.time() - start_time))
