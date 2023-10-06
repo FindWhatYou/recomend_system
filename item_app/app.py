@@ -59,7 +59,7 @@ def calculate_recommendations(option):
     top_10_recommendations = movie_cosines_df.head(10)
 
     show_list = top_10_recommendations.merge(movies,how='inner', on="movieId")[['movieId','title','genres']]
-    show_list
+    
     return show_list
 
 # Multiselect for movies
