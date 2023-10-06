@@ -60,9 +60,6 @@ def main():
     top_10_recommendations = toy_story_cosines_df.head(10)
     return top_10_recommendations
 
-# Print the top recommendations
-print(top_10_recommendations)
-
 st.data_editor(main())
 
 
