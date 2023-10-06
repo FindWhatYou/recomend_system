@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
+import time
 
 # Define a function to construct Google Drive download links
 def gd_path(file_id):
