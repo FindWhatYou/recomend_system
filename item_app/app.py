@@ -17,9 +17,8 @@ files_id = {
 rating = pd.read_csv(gd_path(files_id['rating']), sep=",")
 movies = pd.read_csv(gd_path(files_id['movies']), sep=",")'''
 
-rating = pd.read_csv(r'./data/ratings.csv')
-
-movies = pd.read_csv(r'data/movies.csv')
+rating = pd.read_csv(r'item_app/data/ratings.csv')
+movies = pd.read_csv(r'item_app/data/movies.csv')
 
 # Create a user-movie rating matrix
 user_movie_matrix = pd.pivot_table(data=rating,
