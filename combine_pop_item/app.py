@@ -9,7 +9,7 @@ import time
 df = pd.read_csv(r'combine_pop_item/data/best_movies.csv') 
 
 st.title("Welcome to WBSFLIX Recommendation System")
-st.header("Most Popupal Movies Ever")
+st.header("Most Popular Movies Ever")
 
 number = st.number_input('How many top movies do you want to see?', step=1, min_value=2, value=2)
 displayed_df = df[:number]
