@@ -6,7 +6,8 @@ import time
 # First Part: The Pop-Ranking
 
 
-df = pd.read_csv(r'combine_pop_item/data/best_movies.csv') 
+df = pd.read_csv(r'combine_pop_item/data/best_movies.csv')
+df.rename(columns={'mean':'popular_rating'})
 
 st.title("Welcome to WBSFLIX Recommendation System")
 st.header("Most Popular Movies Ever")
