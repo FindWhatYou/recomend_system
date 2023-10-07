@@ -3,20 +3,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
 import time
 
-'''# Define a function to construct Google Drive download links
-def gd_path(file_id):
-    return f"https://drive.google.com/uc?export=download&id={file_id}"
-
-# Define file IDs for 'rating' and 'movies' datasets
-files_id = {
-    'rating': "1F4_-HBPBSySMjxdGxlykWVjvVn9AJ0BS",
-    'movies': "1PDuCaAhhVTRLYdftMr6VqX23crMqB_qg",
-}
-
-# Load data from Google Drive
-rating = pd.read_csv(gd_path(files_id['rating']), sep=",")
-movies = pd.read_csv(gd_path(files_id['movies']), sep=",")'''
-
 rating = pd.read_csv(r'item_app/data/ratings.csv')
 movies = pd.read_csv(r'item_app/data/movies.csv')
 
